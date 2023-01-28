@@ -197,7 +197,7 @@ body {
     padding-top: 200px !important;
     transform: translateX(400px);
     filter: drop-shadow(var(--bg-shadow));
-    transition: 1s;
+    transition: 0.5s;
   }
 
   /* add open-menu by js when click on open btn */
