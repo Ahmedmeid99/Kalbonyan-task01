@@ -97,7 +97,7 @@ body {
 }
 /* fixed nav-bar */
 .nav-bar-fixed {
-  animation: fide-down 0.7s linear;
+  animation: fide-down 0.5s linear;
   box-shadow: var(--bg-shadow);
   position: fixed;
   width: 100%;
