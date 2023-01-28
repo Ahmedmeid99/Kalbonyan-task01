@@ -306,7 +306,7 @@ body {
 form.form .input {
   border: none;
   border-left: 3px solid var(--main-color);
-  filter: drop-shadow(0px 15px 35px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0px 15px 35px rgba(0, 0, 0, 0.1));
   outline: none;
 }
 .icon-arrow,
@@ -823,35 +823,7 @@ form.form .input {
   color: #333;
   font-size: 18px;
 }
-@media (max-width: 786px) {
-  .download .text {
-    width: auto !important;
-  }
-  .download-options button {
-    padding: 18px 35px 15px 22px;
-  }
-  .download .title > h2 > span {
-    font-size: 40px;
-  }
-}
-@media (max-width: 500px) {
-  .download-options {
-    flex-direction: column;
-    width: 75%;
-  }
-  .download-options button.ios {
-    margin: 0;
-  }
-  .download-options button {
-    justify-content: center;
-  }
-  .download-options button .text .type {
-    font-size: 25px !important;
-  }
-  .download-options button svg {
-    font-size: 30px !important;
-  }
-}
+
 .download-options button {
   border: 1px solid var(--main-title-color);
   padding: 20px 35px 16px 25px;
@@ -894,7 +866,37 @@ form.form .input {
   font-size: 30px;
   font-weight: 600;
 }
-
+@media (max-width: 786px) {
+  .download .text {
+    width: auto !important ;
+  }
+  .download-options button {
+    padding: 10px 12px;
+  }
+  .download-options button .text .download-for {
+    font-size: 14px;
+  }
+  .download-options button .text .type {
+    font-size: 22px;
+  }
+  .download .title > h2 > span {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .download-options button.ios {
+    margin: 0;
+  }
+  .download-options button {
+    justify-content: center;
+  }
+  .download-options button .text .type {
+    font-size: 25px;
+  }
+  .download-options button svg {
+    font-size: 30px;
+  }
+}
 /* ################## */
 /* Pricing Section */
 /* ################## */
@@ -1051,6 +1053,31 @@ form.form .input {
   background-position: center;
     background-size: cover; */
   background-color: #2c6ff4;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-cover::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  left: -40%;
+  height: 50px;
+  background: #fff;
+  transform: rotate(118deg);
+  opacity: 0.1;
+}
+.bg-cover::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 80%;
+  right: -40%;
+  height: 50px;
+  background: #fff;
+  transform: rotate(118deg);
+  opacity: 0.1;
 }
 
 .testimonials .stars svg {
@@ -1128,7 +1155,7 @@ form.form .input {
     font-size: 20px;
   }
   .testimonials p {
-    font-size: 16px;
+    font-size: 15px;
     margin: 0 0 20px 0;
   }
 }
